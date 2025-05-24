@@ -16,12 +16,12 @@ for f in $files; do
 
   # Download samples if not already there
   if [ ! -f $samples_zip ]; then
-    echo "  🎣 Downloading samples_url to $samples_zip"
+    echo "🎣 Downloading samples_url to $samples_zip"
     curl -s $samples_url > $samples_zip
   fi
 
   # Unzip samples_url
-  echo "  📦 Unzipping $samples_zip to $samples_dir"
+  echo "📦 Unzipping $samples_zip to $samples_dir"
   unzip -q -o $samples_zip -d $samples_dir
 
   # Find input files
@@ -34,9 +34,9 @@ for f in $files; do
     echo "$input" | java $f > "$output_file_actual"
     output_actual=$(cat "$output_file_actual")
     if [[ "$output_actual" == "$output" ]]; then
-      echo "  ✅ $input_file"
+      echo "✅ $input_file"
     else
-      echo "  ❌ $input_file"
+      echo "❌ $input_file"
       status=1
     fi
   done
