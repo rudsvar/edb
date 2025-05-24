@@ -3,16 +3,16 @@
 files=$(find src/main/java/no/noria/edb/kattis -type f -name "*.java")
 
 for f in $files; do
+
+  # Prepare paths
+  problem=$(basename "${f%.*}" | tr '[:upper:]' '[:lower:]')
+  echo "🧪 Testing" $problem
+  samples_dir="samples/kattis/$problem"
+  mkdir -p "$samples_dir"
+  samples_zip="$samples_dir/samples.zip"
+  samples_url="https://open.kattis.com/problems/$problem/file/statement/samples.zip"
+
   if [[ $1 == "download" ]]; then
-
-    # Prepare paths
-    problem=$(basename "${f%.*}" | tr '[:upper:]' '[:lower:]')
-    echo "🧪 Testing" $problem
-    samples_dir="samples/kattis/$problem"
-    mkdir -p "$samples_dir"
-    samples_zip="$samples_dir/samples.zip"
-    samples_url="https://open.kattis.com/problems/$problem/file/statement/samples.zip"
-
     # Download samples if not already there
     if [ ! -f $samples_zip ]; then
       echo "  🎣 Downloading samples_url to $samples"
