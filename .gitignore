@@ -37,3 +37,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+*.in
+*.ans
+*.ans.actual
