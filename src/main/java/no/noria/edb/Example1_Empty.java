@@ -13,9 +13,7 @@ public class Example1_Empty { // Start of Example1_Empty
      * A method is just a piece of reusable code.
      * It can receive inputs (String[] args) and produce output (void).
      * *main* is special because it's the entrypoint of the program.
-     *
      * A String is just text. The [] means it's an array (multiple Strings).
-     *
      * *public* means the same as for classes.
      * *static* means that only one variant of this method.
      * *void* is the *return type* of the method.
