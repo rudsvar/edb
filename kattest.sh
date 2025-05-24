@@ -4,7 +4,8 @@ files=$(find src/main/java/no/noria/edb/kattis -type f -name "*.java")
 
 status=0
 
-for f in $files; do
+test() {
+  f="$1"
 
   # Prepare paths
   problem=$(basename "${f%.*}" | tr '[:upper:]' '[:lower:]')
@@ -21,7 +22,6 @@ for f in $files; do
   fi
 
   # Unzip samples_url
-  echo "📦 Unzipping $samples_zip to $samples_dir"
   unzip -q -o $samples_zip -d $samples_dir
 
   # Find input files
@@ -40,6 +40,12 @@ for f in $files; do
       status=1
     fi
   done
+}
+
+export -f test
+
+for f in $files; do
+  parallel test ::: "$f"
 done
 
 exit $status
