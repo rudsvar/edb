@@ -1,7 +1,7 @@
 package no.noria.edb.j24;
 
 public class Example4_Operations {
-    public static void main(String[] args) {
+    public static void main() {
         int a = 10;
         int b = 20;
         int c = a + b; // We can use common math operators like +, -, *, /

@@ -18,7 +18,7 @@ public class Example1_Empty { // Start of Example1_Empty
      * *static* means that only one variant of this method.
      * *void* is the *return type* of the method.
      */
-    public static void main(String[] args) {
+    public static void main() {
         // Code goes here
     }
 } // End of Example1_Empty
