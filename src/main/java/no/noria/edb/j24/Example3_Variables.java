@@ -1,4 +1,4 @@
-package no.noria.edb;
+package no.noria.edb.j24;
 
 public class Example3_Variables {
     public static void main(String[] args) {

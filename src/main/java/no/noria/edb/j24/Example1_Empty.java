@@ -1,5 +1,5 @@
 // Code can be organized into *packages*, which is essentially just a folder.
-package no.noria.edb;
+package no.noria.edb.j24;
 
 /**
  * Code is organized into *classes*, which is essentially a container of code and data.

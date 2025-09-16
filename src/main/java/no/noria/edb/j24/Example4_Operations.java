@@ -1,4 +1,4 @@
-package no.noria.edb;
+package no.noria.edb.j24;
 
 public class Example4_Operations {
     public static void main(String[] args) {
