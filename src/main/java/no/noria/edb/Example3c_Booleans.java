@@ -1,5 +1,5 @@
 /**
- * A String is just text.
+ * A boolean can be true or false.
  */
 void main() {
     boolean isRainy = true;
