@@ -38,6 +38,12 @@ build/
 ### Mac OS ###
 .DS_Store
 
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
+
 *.in
 *.ans
 *.ans.actual

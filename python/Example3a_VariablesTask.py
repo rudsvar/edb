@@ -1,0 +1,1 @@
+# Task: Define some variables
